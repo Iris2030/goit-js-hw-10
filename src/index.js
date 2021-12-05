@@ -16,6 +16,9 @@ input.addEventListener('input', debounce(onInputType, DEBOUNCE_DELAY))
 function onInputType(event){
     let countryName = event.target.value
     let trimCountry = countryName.trim()
+    
+    
+
  
     if (countryName === "") {
         countriesList.innerHTML = ""
@@ -29,13 +32,17 @@ function onInputType(event){
               
   }
     
+ 
+  
+    
 }
 
  
 function renderCountriesList(country) {
     console.log(country)
+     
+ 
     if (country.length > 10) {
-        ;
          Notiflix.Notify.info('Too many matches found. Please enter a more specific name.')
     }
     if (country.length >=2 && country.length <=10) {
@@ -51,5 +58,4 @@ function renderCountriesList(country) {
     }
 
     }
- 
  
