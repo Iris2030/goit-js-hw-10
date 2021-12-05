@@ -5,7 +5,7 @@ import template from './template.hbs'
 import fetchCountries from './fetchCountries'
 import template2 from './template2.hbs'
  
-
+ 
 const countriesList = document.querySelector('.country-list')
 const input = document.querySelector('#search-box')
 const countryDetails = document.querySelector('.country-info')
@@ -54,7 +54,7 @@ function renderCountriesList(country) {
     if (country.length === 1) {
          
         const detailsMarkup = template2(country)
-       
+ 
          countriesListInnerHTML("")  
          countryDetailsInnerHTML(detailsMarkup)
     }

@@ -53,3 +53,7 @@ body {
   font-weight: bold;
   font-style: italic;
 }
+
+.county-name-common {
+  font-size: 40px;
+}

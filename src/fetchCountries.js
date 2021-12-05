@@ -8,7 +8,7 @@ export default function fetchCountries(countryName) {
              
      }
          else {
-            throw new Error("no country with such name exists")
+             throw new Error(console.log("no country with such name exists") )
          }
 })
 }
