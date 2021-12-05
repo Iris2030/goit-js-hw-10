@@ -20,9 +20,9 @@ function onInputType(event){
     
 
  
-    if (countryName === "") {
-        countriesList.innerHTML = ""
-        countryDetails.innerHTML=""
+    if (!countryName) {
+       countriesListInnerHTML('')  
+         countryDetailsInnerHTML("")
     }
  
     else {
@@ -47,15 +47,24 @@ function renderCountriesList(country) {
     }
     if (country.length >=2 && country.length <=10) {
         const markup = template(country)
-        countriesList.innerHTML = markup
-        countryDetails.innerHTML=""
+         countriesListInnerHTML(markup)  
+         countryDetailsInnerHTML("")
    
     }
     if (country.length === 1) {
-        countriesList.innerHTML = ""
+         
         const detailsMarkup = template2(country)
-        countryDetails.innerHTML = detailsMarkup
+       
+         countriesListInnerHTML("")  
+         countryDetailsInnerHTML(detailsMarkup)
     }
 
     }
  
+function countriesListInnerHTML(param) {
+   return countriesList.innerHTML = param
+ 
+}
+function countryDetailsInnerHTML(param) {
+   return countryDetails.innerHTML = param
+}
