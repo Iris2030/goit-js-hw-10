@@ -1,6 +1,8 @@
-<li>
-    {{!-- {{#each 0}} --}}
-    <p class ="county-name"> {{0.name.official}}</p>>
-
-{{!-- {{/each}} --}}
+{{#each this}}
+<li class="country-list-item">
+    <img class="flag" src="{{flags.svg}}" alt="{{name}}" width = "40" height = "20">
+    <p class ="county-name"> {{name.official}}</p>
 </li>
+
+
+{{/each}}
